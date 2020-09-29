@@ -42,7 +42,7 @@ public class GreetingServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>JavaServlets</h1>");
-            out.println("<h2>Saudação</h2>");
+            out.println("<h2>Saudaçãoo</h2>");
             out.println("<div><a href='index.html'>Voltar</a></div>");
             int h = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
             if(h<6){
