@@ -15,7 +15,7 @@
     <body>
         <h1>JavaOO</h1>
         <h2>Índice</h2>
-        <h3><a href="horario.jsp">Classe Horário</a></h3>
+        <h3><a href="horario.jsp">Classe Horários</a></h3>
         <h3><a href="users.jsp">Usuários</a></h3>
     </body>
 </html>
