@@ -18,7 +18,7 @@
         <title>Minha idade - JSP</title>
     </head>
     <body>
-        <h1>Idade de Rogério Alexandre Gongora</h1>
+        <h1>Idade de Rogério Alex Gongora</h1>
         <h2>Idade:</h2>
         <%=idade%>
         <br>
