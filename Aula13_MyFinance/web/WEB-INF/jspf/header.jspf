@@ -47,6 +47,7 @@
         <a href='<%= request.getContextPath()%>/perfil.jsp'>PERFIL</a>
         <%if(session.getAttribute("session.papel").equals("ADMINISTRADOR")){%>    
             | <a href='<%= request.getContextPath()%>/admin.jsp'>ADMINISTRAÇÃO DO SITE</a>
-        <%}%>    
+        <%}%> 
+        <a href="<%= request.getContextPath() %>/categorias.jsp">CATEGORIAS</a>
 </form>
 <%}%>

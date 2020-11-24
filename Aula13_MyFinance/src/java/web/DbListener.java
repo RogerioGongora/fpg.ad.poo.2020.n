@@ -8,11 +8,15 @@ package web;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import java.sql.*;
+import model.Categoria;
 import model.Usuario;/**
+ * Web application lifecycle listener./**
  * Web application lifecycle listener.
- *
  * @author Rogerio
  */
+
+ 
+ 
 public class DbListener implements ServletContextListener{
     public static final String CLASS_NAME = "org.sqlite.JDBC";
     public static final String DB_URL = "jdbc:sqlite:my-finance.db";
@@ -34,8 +38,9 @@ public class DbListener implements ServletContextListener{
             Class.forName(CLASS_NAME);
             etapa = "Conectando com o Banco de Dados";
             con = DriverManager.getConnection(DB_URL);
-            etapa = "Criando a Tabela de Usuários";
+            etapa = "Preparando o statement";
             stmt = con.createStatement();
+            etapa = "Criando a Tabela de Usuários";
             stmt.execute(Usuario.getCreateStatement());
             if(Usuario.getList().isEmpty()){
                 stmt.execute("INSERT INTO usuarios VALUES("
@@ -49,6 +54,10 @@ public class DbListener implements ServletContextListener{
                         + "'ALUNO',"
                         + "1234".hashCode()+")");
             }
+            
+           etapa = "Criando a Tabela de Categorias";
+            stmt.execute(Categoria.getCreateStatement());
+            
             etapa = "Desconectando do Banco de Dados";
         
         } catch (Exception ex) {
